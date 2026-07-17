@@ -81,10 +81,7 @@ Use when you need:
 - chat-local relationship continuity
 
 Reference:
-
-Notes:
-
-- Relationship-save commit-flow docs are still pending migration into the canonical HumanOS repo.
+- [HumanOS Relationship Memory and Save Boundaries](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/relationship-memory/docs/relationship/humanos-relationship-memory.md)
 
 ### Narrative Arc
 
@@ -118,6 +115,22 @@ Notes:
 
 - Narrative-generator UI behavior belongs to host-app integration docs and is not yet migrated into this canonical framework repo.
 
+### Evaluation
+
+Review and correction rules for checking whether live output remains aligned with HumanOS expectations.
+
+Use when you need:
+
+- consistency scoring
+- reviewer verdict boundaries
+- ordered review expectations
+- correction versus rejection guidance
+- full-context diagnosis versus recent-turn analysis
+
+Reference:
+- [HumanOS Evaluation Scorecards](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-evaluation-scorecards.md)
+- [HumanOS Reviewer Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-reviewer-contract.md)
+
 ## How the layers interact
 
 1. The **character** card defines who the character is in a durable sense.
@@ -127,11 +140,13 @@ Notes:
 5. The **narrative arc** projects the current story direction from runtime and relationship context.
 6. The **relationship save** preserves the evolving history between one character and one persona.
 7. The **narrative generator UI** is the user-facing surface that turns runtime projection into editable deliverables.
+8. The **evaluation** surface judges whether output and revisions remain aligned with continuity, viewpoint, character, and boundary expectations.
 
 If a fact is durable, keep it in the character or persona layer.
 If it is conditional, keep it in a lorebook.
 If it is temporary, keep it in runtime.
 If it is relationship history, keep it in the relationship save.
+If it is a quality judgment or corrective instruction, keep it in evaluation.
 
 ## Design rules
 
