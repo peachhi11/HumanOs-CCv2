@@ -65,11 +65,8 @@ Use when you need:
 - compact retrieval entries
 
 Reference:
+- [HumanOS Lorebook Linking Boundaries](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/memory-retrieval/docs/memory/humanos-lorebook-linking.md)
 - [HumanOS v2 Architecture](humanos-v2-architecture.md)
-
-Notes:
-
-- Lorebook-linking guidance is still pending migration into the canonical HumanOS repo.
 
 ### Relationship Save
 

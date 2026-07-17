@@ -145,5 +145,4 @@ Pending migration from host-app repos:
 
 - architecture-map / developer implementation map
 - generalized proposed patch commit system
-- lorebook linking guidance
 - Professor Mari integration notes
