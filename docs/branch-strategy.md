@@ -23,17 +23,15 @@ Keep this branch lightweight.
 - `architecture/contracts`
 - `architecture/templates`
 - `docs/memory-retrieval`
+- `docs/relationship-memory`
 
 Use these when the material is canonical HumanOS framework content and can be understood without one specific host application.
 
-### Future evaluation branches
-
-Suggested pattern:
+### Evaluation
 
 - `evaluation/scorecards`
-- `evaluation/reviewer-contracts`
 
-Use these when reviewer logic, QC criteria, or scoring systems become large enough to stand alone as first-class framework surfaces.
+Use evaluation branches when reviewer logic, QC criteria, or scoring systems need a canonical framework home across more than one host application.
 
 ### Future workflow or authoring branches
 
@@ -41,7 +39,6 @@ Suggested pattern:
 
 - `docs/authoring`
 - `docs/world-boundaries`
-- `docs/relationship-memory`
 
 Use these when a framework concept grows beyond a short appendix and needs its own canon.
 
