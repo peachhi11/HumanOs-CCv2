@@ -147,6 +147,20 @@ Reference:
 - [HumanOS Evaluation Scorecards](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-evaluation-scorecards.md)
 - [HumanOS Reviewer Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-reviewer-contract.md)
 
+### Reviewer Modes
+
+Operating shapes for how a reviewer is being asked to judge material.
+
+Use when you need:
+
+- gate review behavior
+- scorecard review behavior
+- diagnostic review behavior
+- recent-window review behavior
+
+Reference:
+- [HumanOS Reviewer Modes](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/reviewer-modes/docs/evaluation/humanos-reviewer-modes.md)
+
 ### Authoring Workflow
 
 Contributor-facing placement guidance for building HumanOS artifacts cleanly before generation.
@@ -171,7 +185,8 @@ Reference:
 7. The **relationship save** preserves the evolving history between one character and one persona.
 8. The **narrative generator UI** is the user-facing surface that turns runtime projection into editable deliverables.
 9. The **evaluation** surface judges whether output and revisions remain aligned with continuity, viewpoint, character, and boundary expectations.
-10. The **authoring workflow** tells contributors where these facts should live before generation starts.
+10. The **reviewer modes** surface defines how those judgments are requested and scoped.
+11. The **authoring workflow** tells contributors where these facts should live before generation starts.
 
 If a fact is durable, keep it in the character or persona layer.
 If it is a setting-wide external constraint, keep it in world truth.
@@ -179,6 +194,7 @@ If it is conditional, keep it in a lorebook.
 If it is temporary, keep it in runtime.
 If it is relationship history, keep it in the relationship save.
 If it is a quality judgment or corrective instruction, keep it in evaluation.
+If it is a rule about how review should run or be scoped, keep it in reviewer modes.
 If it is contributor placement guidance, keep it in authoring workflow.
 
 ## Design rules
@@ -192,6 +208,7 @@ If it is contributor placement guidance, keep it in authoring workflow.
 - Do not let the runtime contract become a second character card.
 - Do not let the narrative arc become a replacement for runtime, lorebook, or relationship save.
 - Do not let the narrative generator UI become a separate truth source. It is a view and edit surface for the runtime projection.
+- Do not confuse score criteria with reviewer operating modes.
 
 ## Current Marinara integration examples
 

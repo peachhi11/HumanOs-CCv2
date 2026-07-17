@@ -13,3 +13,5 @@ Related docs live on sibling branches:
 
 - `architecture/contracts` for runtime and narrative contracts
 - `architecture/templates` for reusable character and persona templates
+- `evaluation/reviewer-modes` for reviewer operating modes
+- `evaluation/scorecards` for evaluation and reviewer guidance

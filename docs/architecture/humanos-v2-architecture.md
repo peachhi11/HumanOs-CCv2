@@ -146,6 +146,7 @@ The runtime commit tool requires a server-owned canonical assistant anchor and w
 - [HumanOS Relationship Commit-Flow Guidance](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/relationship-memory/docs/relationship/humanos-relationship-commit-flow.md)
 - [HumanOS Evaluation Scorecards](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-evaluation-scorecards.md)
 - [HumanOS Reviewer Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-reviewer-contract.md)
+- [HumanOS Reviewer Modes](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/reviewer-modes/docs/evaluation/humanos-reviewer-modes.md)
 
 Pending migration from host-app repos:
 
