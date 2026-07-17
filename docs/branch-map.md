@@ -113,6 +113,19 @@ Current docs:
 - `docs/evaluation/humanos-evaluation-scorecards.md`
 - `docs/evaluation/humanos-reviewer-contract.md`
 
+### `evaluation/reviewer-modes`
+
+Purpose:
+
+- reviewer operating modes
+- scope-selection rules
+- gate versus diagnostic review behavior
+- review-output shape expectations by mode
+
+Current docs:
+
+- `docs/evaluation/humanos-reviewer-modes.md`
+
 ### `docs/relationship-memory`
 
 Purpose:
