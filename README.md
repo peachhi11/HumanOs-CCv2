@@ -11,6 +11,7 @@ Primary documents in this branch:
 
 Related docs live on sibling branches:
 
+- `evaluation/reviewer-modes` for reviewer operating modes and scope rules
 - `docs/architecture` for the architectural overview
 - `architecture/contracts` for runtime and narrative contracts
 - `docs/relationship-memory` for relationship-save boundaries
