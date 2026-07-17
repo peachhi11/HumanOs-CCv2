@@ -74,6 +74,33 @@ Current docs:
 
 - `docs/memory/humanos-lorebook-linking.md`
 
+### `evaluation/scorecards`
+
+Purpose:
+
+- evaluation scorecards
+- reviewer verdict rules
+- ordered review expectations
+- correction and rejection boundaries
+
+Current docs:
+
+- `docs/evaluation/humanos-evaluation-scorecards.md`
+- `docs/evaluation/humanos-reviewer-contract.md`
+
+### `docs/relationship-memory`
+
+Purpose:
+
+- relationship-save boundaries
+- checkpoint and milestone retention rules
+- managed lorebook projection separation
+- chat-local relationship continuity
+
+Current docs:
+
+- `docs/relationship/humanos-relationship-memory.md`
+
 ## What does not belong here
 
 The canonical framework repo should avoid swallowing host-app specifics by default.
@@ -98,7 +125,6 @@ If an app such as Marinara Engine implements HumanOS:
 
 Likely future framework surfaces:
 
-- relationship-save commit-flow guidance
-- evaluation scorecards
-- reviewer-mode contracts
 - world and memory boundary docs
+- authoring workflow docs
+- cross-app evaluator profiles
