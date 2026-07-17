@@ -23,6 +23,7 @@ Keep this branch lightweight.
 - `architecture/contracts`
 - `architecture/templates`
 - `docs/memory-retrieval`
+- `docs/world-boundaries`
 - `docs/relationship-memory`
 
 Use these when the material is canonical HumanOS framework content and can be understood without one specific host application.
@@ -33,14 +34,18 @@ Use these when the material is canonical HumanOS framework content and can be un
 
 Use evaluation branches when reviewer logic, QC criteria, or scoring systems need a canonical framework home across more than one host application.
 
-### Future workflow or authoring branches
+### Authoring
+
+- `docs/authoring`
+
+Use authoring branches when contributor workflow, placement guidance, and authoring-time boundaries need a canonical framework home that stays separate from runtime behavior.
+
+### Future workflow branches
 
 Suggested pattern:
 
-- `docs/authoring`
-- `docs/world-boundaries`
-
-Use these when a framework concept grows beyond a short appendix and needs its own canon.
+- `docs/examples`
+- `docs/reference-packets`
 
 ## When to create a new branch
 

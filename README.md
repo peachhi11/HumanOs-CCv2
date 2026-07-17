@@ -26,6 +26,8 @@ This repository currently uses branch-owned slices:
 - `architecture/contracts` — runtime and narrative contracts
 - `architecture/templates` — reusable character and persona templates
 - `docs/memory-retrieval` — lorebook-linking and retrieval-boundary guidance
+- `docs/world-boundaries` — world-truth and world-state boundary guidance
+- `docs/authoring` — contributor-facing HumanOS authoring workflow guidance
 - `evaluation/scorecards` — evaluation scorecards and reviewer guidance
 - `docs/relationship-memory` — relationship-save, commit-flow, and managed-projection boundaries
 
