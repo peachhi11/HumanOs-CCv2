@@ -74,6 +74,31 @@ Current docs:
 
 - `docs/memory/humanos-lorebook-linking.md`
 
+### `docs/world-boundaries`
+
+Purpose:
+
+- world-truth boundaries
+- setting-rule ownership
+- world-state versus runtime separation
+- world-lore placement guidance
+
+Current docs:
+
+- `docs/world/humanos-world-boundaries.md`
+
+### `docs/authoring`
+
+Purpose:
+
+- contributor-facing authoring workflow
+- placement rules for cards, personas, lorebooks, runtime, and evaluation
+- authoring versus runtime separation
+
+Current docs:
+
+- `docs/authoring/humanos-authoring-workflow.md`
+
 ### `evaluation/scorecards`
 
 Purpose:
@@ -125,6 +150,5 @@ If an app such as Marinara Engine implements HumanOS:
 
 Likely future framework surfaces:
 
-- world and memory boundary docs
-- authoring workflow docs
 - cross-app evaluator profiles
+- reference examples and sample packets
