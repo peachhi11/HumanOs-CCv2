@@ -1,39 +1,15 @@
 # HumanOs-CCv2
 
-HumanOS-CCv2 is the canonical framework repo for HumanOS v2.
+This branch holds the canonical HumanOS memory and retrieval guidance.
 
-This repo separates the core HumanOS architecture into branch-owned lanes so the framework can stay clean, reusable, and independent from any one host application.
+It is for framework-level lorebook boundaries: what belongs in retrieval, how lorebooks should link to characters and personas, and how managed projections must stay separate from user-authored material.
 
-## What HumanOS v2 is
+Primary documents in this branch:
 
-HumanOS v2 is a behavioral architecture for:
+- `docs/memory/humanos-lorebook-linking.md`
 
-- character authoring
-- persona authoring
-- runtime state
-- narrative projection
-- relationship continuity
-- evaluation and integration design
+Related docs live on sibling branches:
 
-The core idea is simple: stable identity, mutable runtime truth, conditional retrieval, and review logic should not all be collapsed into one giant prompt.
-
-## Branch layout
-
-This repository currently uses branch-owned slices:
-
-- `HumanOS-main` — landing branch, overview, and repo-level navigation
-- `docs/architecture` — framework architecture docs
-- `architecture/contracts` — runtime and narrative contracts
-- `architecture/templates` — reusable character and persona templates
-
-See [docs/branch-map.md](docs/branch-map.md) for the detailed map.
-
-## Relationship to app integrations
-
-HumanOS is framework-first here.
-
-Host-app implementation details, UI behavior, tool wiring, and app-specific storage examples may live in integration repos such as Marinara Engine. Those integrations can reference this repo as the canonical home for framework concepts, contracts, and templates.
-
-## Current priority
-
-This repo is being used to separate canonical HumanOS architecture from app-specific implementation history so the framework can evolve cleanly on its own terms.
+- `docs/architecture` for the architectural overview
+- `architecture/contracts` for runtime and narrative contracts
+- `architecture/templates` for reusable character and persona templates

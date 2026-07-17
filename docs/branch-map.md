@@ -61,6 +61,19 @@ Current docs:
 - `architecture/templates/humanos-character-card-template.md`
 - `architecture/templates/humanos-persona-template.md`
 
+### `docs/memory-retrieval`
+
+Purpose:
+
+- lorebook-linking boundaries
+- retrieval ownership rules
+- conditional-memory guidance
+- managed projection separation
+
+Current docs:
+
+- `docs/memory/humanos-lorebook-linking.md`
+
 ## What does not belong here
 
 The canonical framework repo should avoid swallowing host-app specifics by default.
@@ -85,7 +98,6 @@ If an app such as Marinara Engine implements HumanOS:
 
 Likely future framework surfaces:
 
-- lorebook-linking guidance
 - relationship-save commit-flow guidance
 - evaluation scorecards
 - reviewer-mode contracts
