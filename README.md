@@ -26,6 +26,8 @@ This repository currently uses branch-owned slices:
 - `architecture/contracts` — runtime and narrative contracts
 - `architecture/templates` — reusable character and persona templates
 - `docs/memory-retrieval` — lorebook-linking and retrieval-boundary guidance
+- `evaluation/scorecards` — evaluation scorecards and reviewer guidance
+- `docs/relationship-memory` — relationship-save and managed-projection boundaries
 
 See [docs/branch-map.md](docs/branch-map.md) for the detailed map and [docs/branch-strategy.md](docs/branch-strategy.md) for the rules that decide when a surface should get its own branch.
 
