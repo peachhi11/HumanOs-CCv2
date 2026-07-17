@@ -53,6 +53,21 @@ Reference:
 - [HumanOS v2 Runtime Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/architecture/contracts/architecture/contracts/humanos-runtime-contract.md)
 - [HumanOS v2 Narrative Arc Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/architecture/contracts/architecture/contracts/humanos-narrative-arc-contract.md)
 
+### World
+
+External truth that belongs to the setting rather than to one character.
+
+Use when you need:
+
+- setting rules
+- cultural or institutional constraints
+- technology or magic limits
+- public external facts
+- world-state placement rules
+
+Reference:
+- [HumanOS World Boundaries](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/world-boundaries/docs/world/humanos-world-boundaries.md)
+
 ### Lorebook
 
 Retrieval-only depth for conditional facts that should not live in the always-on card.
@@ -132,26 +147,44 @@ Reference:
 - [HumanOS Evaluation Scorecards](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-evaluation-scorecards.md)
 - [HumanOS Reviewer Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-reviewer-contract.md)
 
+### Authoring Workflow
+
+Contributor-facing placement guidance for building HumanOS artifacts cleanly before generation.
+
+Use when you need:
+
+- placement rules for cards, personas, lorebooks, runtime, world, and evaluation
+- authoring versus runtime separation
+- contributor workflow for building HumanOS artifacts cleanly
+
+Reference:
+- [HumanOS Authoring Workflow](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/authoring/docs/authoring/humanos-authoring-workflow.md)
+
 ## How the layers interact
 
 1. The **character** card defines who the character is in a durable sense.
 2. The **persona** card defines who the user is in the chat.
 3. The **runtime** contract records what is true right now.
-4. The **lorebook** stores conditional depth that should only appear when triggered.
-5. The **narrative arc** projects the current story direction from runtime and relationship context.
-6. The **relationship save** preserves the evolving history between one character and one persona.
-7. The **narrative generator UI** is the user-facing surface that turns runtime projection into editable deliverables.
-8. The **evaluation** surface judges whether output and revisions remain aligned with continuity, viewpoint, character, and boundary expectations.
+4. The **world** layer defines setting-wide external truth and placement boundaries for world-state material.
+5. The **lorebook** stores conditional depth that should only appear when triggered.
+6. The **narrative arc** projects the current story direction from runtime and relationship context.
+7. The **relationship save** preserves the evolving history between one character and one persona.
+8. The **narrative generator UI** is the user-facing surface that turns runtime projection into editable deliverables.
+9. The **evaluation** surface judges whether output and revisions remain aligned with continuity, viewpoint, character, and boundary expectations.
+10. The **authoring workflow** tells contributors where these facts should live before generation starts.
 
 If a fact is durable, keep it in the character or persona layer.
+If it is a setting-wide external constraint, keep it in world truth.
 If it is conditional, keep it in a lorebook.
 If it is temporary, keep it in runtime.
 If it is relationship history, keep it in the relationship save.
 If it is a quality judgment or corrective instruction, keep it in evaluation.
+If it is contributor placement guidance, keep it in authoring workflow.
 
 ## Design rules
 
 - Do not mix runtime state into card truth.
+- Do not confuse world truth with character truth.
 - Do not put always-active biography into lorebooks.
 - Do not let story binding overwrite character truth.
 - Do not make persona and character fields interchangeable.
