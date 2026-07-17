@@ -31,6 +31,7 @@ Use these when the material is canonical HumanOS framework content and can be un
 ### Evaluation
 
 - `evaluation/scorecards`
+- `evaluation/reviewer-modes`
 
 Use evaluation branches when reviewer logic, QC criteria, or scoring systems need a canonical framework home across more than one host application.
 

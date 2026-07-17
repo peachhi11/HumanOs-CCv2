@@ -29,6 +29,7 @@ This repository currently uses branch-owned slices:
 - `docs/world-boundaries` — world-truth and world-state boundary guidance
 - `docs/authoring` — contributor-facing HumanOS authoring workflow guidance
 - `evaluation/scorecards` — evaluation scorecards and reviewer guidance
+- `evaluation/reviewer-modes` — reviewer operating modes and scope-selection guidance
 - `docs/relationship-memory` — relationship-save, commit-flow, and managed-projection boundaries
 
 See [docs/branch-map.md](docs/branch-map.md) for the detailed map and [docs/branch-strategy.md](docs/branch-strategy.md) for the rules that decide when a surface should get its own branch.
