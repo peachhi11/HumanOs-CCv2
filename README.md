@@ -25,8 +25,9 @@ This repository currently uses branch-owned slices:
 - `docs/architecture` — framework architecture docs
 - `architecture/contracts` — runtime and narrative contracts
 - `architecture/templates` — reusable character and persona templates
+- `docs/memory-retrieval` — lorebook-linking and retrieval-boundary guidance
 
-See [docs/branch-map.md](docs/branch-map.md) for the detailed map.
+See [docs/branch-map.md](docs/branch-map.md) for the detailed map and [docs/branch-strategy.md](docs/branch-strategy.md) for the rules that decide when a surface should get its own branch.
 
 ## Relationship to app integrations
 
