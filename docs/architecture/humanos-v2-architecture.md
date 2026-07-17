@@ -141,6 +141,7 @@ The runtime commit tool requires a server-owned canonical assistant anchor and w
 - [HumanOS v2 Runtime Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/architecture/contracts/architecture/contracts/humanos-runtime-contract.md)
 - [HumanOS v2 Narrative Arc Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/architecture/contracts/architecture/contracts/humanos-narrative-arc-contract.md)
 - [HumanOS Relationship Memory and Save Boundaries](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/relationship-memory/docs/relationship/humanos-relationship-memory.md)
+- [HumanOS Relationship Commit-Flow Guidance](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/relationship-memory/docs/relationship/humanos-relationship-commit-flow.md)
 - [HumanOS Evaluation Scorecards](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-evaluation-scorecards.md)
 - [HumanOS Reviewer Contract](https://github.com/peachhi11/HumanOs-CCv2/blob/evaluation/scorecards/docs/evaluation/humanos-reviewer-contract.md)
 

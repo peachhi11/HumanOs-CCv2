@@ -82,6 +82,7 @@ Use when you need:
 
 Reference:
 - [HumanOS Relationship Memory and Save Boundaries](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/relationship-memory/docs/relationship/humanos-relationship-memory.md)
+- [HumanOS Relationship Commit-Flow Guidance](https://github.com/peachhi11/HumanOs-CCv2/blob/docs/relationship-memory/docs/relationship/humanos-relationship-commit-flow.md)
 
 ### Narrative Arc
 
