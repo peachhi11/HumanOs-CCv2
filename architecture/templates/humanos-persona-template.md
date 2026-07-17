@@ -25,15 +25,18 @@ When filling this template, the LLM should:
 
 The preferred output is a persona card in this order:
 
-1. Persona name
-2. Identity
-3. Personality
-4. Story role / scenario
-5. Backstory
-6. Appearance
-7. Relationships / social style
-8. Speech style
-9. Optional notes
+|Module	|Definition	|Key Outputs / Observables|
+|1. Identity	|Objective, immutable facts about the person	|Name, Age, Sex/Gender, Pronouns, Occupation, Nationality, Appearance, Immutable Biography; fleeting physical tells (eye rolls, smirks, clenched jaw)|
+|2. Personality	|Foundational operating principles driving behaviour|	Core Laws, Values, Moral Priorities, Identity Rules, Motivations, Standards; behaviours and rituals derived from principles
+|3. Cognition |	Subjective understanding of reality	|Self, Other, World, Love, Power, Safety, Freedom, Justice Models; thought/interpretation patterns and internal narration (predicting conversations, scanning exits)|
+|4. Psychology|	Emotional machinery and survival mechanisms	|Core Wound, Fear, Need, Lie, Attachment Style, Defence & Recovery Frameworks; comfort, regulation, defence, and recovery behaviours (cleaning, humour masking)|
+|5. Relational Infrastructure|	Systems for connecting with others	|Trust, Boundaries, Expectations, Conflict, Repair, Affection, Intimacy for categories (Strangers → Fame/Media); social rituals and trust/repair behaviours|
+|6. Sexuality|	Personality expressed under intimacy	Sexual Identity, Core Laws, Needs/Fears, Attachment, Desire Engine, Boundaries, Consent & Aftercare; flirting, desire, intimacy, consent, aftercare behaviours|
+|7. Speech	|Language arising from all previous modules|	Speech Laws, Vocabulary, Syntax, Cadence, Humour, Conflict/Affection Language; reference speech examples only|
+|8. Runtime	|Mutable present-state information|	Arc, Relationships, Scene, Goal, Mood, Stress, Trust, Fatigue, Hope, Active Memories|
+|9. World	|External reality independent of the character|	Setting, Locations, Tech, History, Culture, Politics, Economy, Power Structures, Social Norms|
+|10. Director	|How the world behaves beyond the character	|NPC Behaviour, Random Events, Environmental Simulation, Outcome Bias, Coincidences, Scene Interruptions, World Progression|
+|11. Supporting Cast	|Other entities in the narrative ecosystem|	Name, Role, Narrative Function, Relationships, Personality Snapshot, Conflict/Knowledge Gaps, Activation Triggers|
 
 ## Template
 
