@@ -1,0 +1,85 @@
+# HumanOS v2 Integration Map for Marinara Engine
+
+This document explains which HumanOS material is canonical in the HumanOS repo and which material is owned by Marinara Engine.
+
+Use it before editing docs or behavior so framework concepts and app-specific implementation don't drift into each other.
+
+## Canonical framework repo
+
+The canonical HumanOS framework repo is:
+
+- [peachhi11/HumanOs-CCv2](https://github.com/peachhi11/HumanOs-CCv2)
+
+Current framework surfaces on `main`:
+
+- `docs/architecture` - architecture overview and cross-surface index
+- `architecture/contracts` - runtime and narrative contracts
+- `architecture/templates` - reusable character and persona templates
+- `docs/memory` - lorebook-linking and retrieval-boundary guidance
+- `docs/world` - world-truth and world-state boundary guidance
+- `docs/authoring` - contributor-facing HumanOS authoring workflow guidance
+- `docs/evaluation` - scorecards, reviewer contract, and reviewer modes
+- `docs/relationship` - relationship-save, commit-flow, managed-projection, and relationship-framework guidance
+- `docs/integration` - host-app boundary maps
+
+## What belongs in HumanOS-CCv2
+
+Keep these in the HumanOS repo when they are meant as canonical framework material:
+
+- Layer definitions
+- Truth boundaries
+- Reusable contracts
+- Reusable templates
+- Retrieval ownership rules
+- World and setting boundary rules
+- Authoring workflow and placement guidance
+- Reviewer or evaluation rules that aren't specific to one app
+- Reviewer operating modes and scope-selection rules
+
+## What belongs in Marinara
+
+Keep these in Marinara when they are primarily about this product's implementation:
+
+- Route surfaces
+- Storage adapters
+- Governed commit implementation details
+- UI tabs, buttons, and click paths
+- Professor Mari tool wiring
+- Import and export behavior
+- App-specific debugging notes
+
+## Current mapping
+
+| Concern | Canonical home | Marinara home |
+| --- | --- | --- |
+| HumanOS architecture concepts | HumanOS-CCv2 `docs/architecture` | integration examples only |
+| Runtime and narrative contracts | HumanOS-CCv2 `architecture/contracts` | implementation of those contracts |
+| Character and persona templates | HumanOS-CCv2 `architecture/templates` | editor fields and app flows |
+| Lorebook-linking boundaries | HumanOS-CCv2 `docs/memory` | UI guide in `docs/lorebooks/linking-to-characters.md` |
+| World-truth and world-state boundary rules | HumanOS-CCv2 `docs/world` | app-specific world state, scenario, and storage implementation |
+| Contributor-facing authoring workflow | HumanOS-CCv2 `docs/authoring` | product-specific editors, prompts, and creation flows |
+| Relationship-save boundaries, commit-flow guidance, and managed projection rules | HumanOS-CCv2 `docs/relationship` | `docs/development/generalized-proposed-patch-commit-system.md` and server implementation |
+| Relationship framework and trust-web interpretation | HumanOS-CCv2 `docs/relationship` | product-specific runtime usage and prompts |
+| Evaluation scorecards and reviewer guidance | HumanOS-CCv2 `docs/evaluation` | ordered review wiring, reviewer agents, and product-specific prompts |
+| Reviewer operating modes and scope-selection rules | HumanOS-CCv2 `docs/evaluation` | product-specific review routing, UI modes, and trigger mapping |
+| Narrative generator UI behavior | framework implications may be documented canonically | Marinara UI and routes |
+| Professor Mari behavior | only if generalized beyond Marinara | Marinara-specific docs and code |
+
+## Editing rule of thumb
+
+If the question is:
+
+- **"What does HumanOS mean by this?"** edit HumanOS-CCv2.
+- **"How does Marinara expose or implement this?"** edit Marinara.
+
+## Current Marinara-owned HumanOS documents
+
+These remain implementation-side or app-specific today:
+
+- `docs/development/humanos-v2-architecture.md`
+- `docs/development/humanos-architecture-index.md`
+- `docs/development/humanos-narrative-generator-ui.md`
+- `docs/development/generalized-proposed-patch-commit-system.md`
+- `docs/lorebooks/linking-to-characters.md`
+
+Some of these may later be split further as more framework-level surfaces are extracted.

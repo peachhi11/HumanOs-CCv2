@@ -15,7 +15,7 @@ The narrative arc is a one-page overview of the current story course broken into
 4. Turning Point
 5. Resolution / Transition
 
-It is not the same thing as the character card, the persona card, or the relationship save.
+It isn't the same thing as the character card, the persona card, or the relationship save.
 
 - The **character card** says who the other person is.
 - The **persona card** says who the player is.
@@ -27,44 +27,72 @@ It is not the same thing as the character card, the persona card, or the relatio
 
 A usable narrative arc should include:
 
-- the current setup
-- the active emotional or practical tension
-- the likely short-term escalation
-- the most plausible complication
-- the likely turning point
-- the current transition target
-- any first-message or alternate-opening implications
-- any lorebook-worthy durable facts that should be retained
+- The current setup
+- The active emotional or practical tension
+- The likely short-term escalation
+- The most plausible complication
+- The likely turning point
+- The current transition target
+- Any first-message or alternate-opening implications
+- Any lorebook-worthy durable facts that should be retained
 
 ## What it should not contain
 
-The narrative arc should not:
+The narrative arc shouldn't:
 
-- restate the full character card
-- restate the full persona card
-- duplicate the relationship save
-- replace runtime history
-- become a giant freeform story prompt
-- flatten dynamic metrics into one universal value
+- Restate the full character card
+- Restate the full persona card
+- Duplicate the relationship save
+- Replace runtime history
+- Become a giant freeform story prompt
+- Flatten dynamic metrics into one universal value
 
 ## How it is generated
 
 The arc generator blends:
 
-- character truth
-- persona truth
-- current runtime truth
-- relationship-save state
-- scenario context
-- active lorebook entries when relevant
+- Character truth
+- Persona truth
+- Current runtime truth
+- Relationship-framework interpretation
+- Relationship-save state
+- Scenario context
+- Active lorebook entries when relevant
 
 That blend is what makes the arc useful. It should understand that runtime pressure changes depending on:
 
-- the character/persona combination
-- the current scenario
-- the scene pressure
-- the point in the relationship
-- the mode of play
+- The character/persona combination, current scenario, scene pressure, point in the relationship, mode of play.
+
+Relationship interpretation should stay qualitative. The arc generator may use trope-coded relationship language such as "reluctant allies," "slow-burn friends to lovers," "rivals with unresolved respect," or "rupture and repair" when that language helps explain what is plausible next. It shouldn't require a universal numeric gate before a relationship beat can happen.
+
+## Narrative stitching workflow
+
+Before the generator writes the five-stage arc, it should stitch the available timeline evidence into coherent story sections.
+
+The reference logic comes from a Python `NarrativeStitcher`, but HumanOS should carry the workflow, not the Python implementation. A JavaScript or TypeScript implementation should preserve the same conceptual pass:
+
+1. Gather dated runtime, relationship-save, scenario, and lorebook-relevant events.
+2. Keep the events in chronological order and preserve their source evidence.
+3. Group events by the best available theme, using tags first, then event type, then `misc` only as a fallback.
+4. Score possible transitions by thematic overlap, matching event type, shared characters, and time density.
+5. Prefer sections that stay coherent without flattening emotional change. A visible sentiment or tension shift should become a story beat, not be smoothed away.
+6. Cap the number of sections so the result stays readable.
+7. Summarize each section as a short arc beat, then map those beats into Setup, Escalation, Complication, Turning Point, and Resolution / Transition.
+
+This stitching pass sits between runtime truth and narrative prose. It must not invent events to make the arc cleaner. If the source timeline is thin, contradictory, or missing key relationship evidence, the arc should say so and offer `ALT` or `BRANCH` only as explicit user-facing choices.
+
+Useful event metadata includes:
+
+- `date`
+- `title`
+- `type`
+- `tags`
+- participating characters or personas
+- relationship-state markers
+- tension or sentiment shift
+- source layer, such as runtime, relationship save, scenario, or lorebook
+
+The stitched sections are planning evidence. They may feed first-message seeds, alternate openings, narrative-arc lorebook hooks, or a runtime overlay, but they do not replace the runtime snapshot or relationship save.
 
 ## Output shape
 
@@ -104,17 +132,17 @@ The runtime surface should present as a narrative generator, not as a raw state 
 - Once both character and persona are linked, the generator can blend character truth, persona truth, runtime truth, and relationship-save state into a plausible current narrative.
 
 The output should be editable before it is committed back into runtime, used to update the active lorebook, or projected into a new scenario pass.
-When a scene cannot be expressed without breaking canon, the arc surface should not silently force it. It should make the `ALT` versus `BRANCH` choice visible.
+When a scene can't be expressed without breaking canon, the arc surface shouldn't silently force it. It should make the `ALT` versus `BRANCH` choice visible.
 
 ## Update contract
 
 The narrative arc is updated when:
 
-- the user explicitly regenerates it
-- the linked character changes materially
-- the linked persona changes materially
-- the relationship save advances
-- the runtime state changes in a way that meaningfully shifts the arc
+- The user explicitly regenerates it
+- The linked character changes materially
+- The linked persona changes materially
+- The relationship save advances
+- The runtime state changes in a way that meaningfully shifts the arc
 
 When the user is done with one arc and wants another, the same surface can be reused to generate a new arc for the next phase. The UI should support repeated regeneration without requiring the user to abandon the page or rebuild the pairing from scratch.
 
@@ -122,18 +150,19 @@ When the user is done with one arc and wants another, the same surface can be re
 
 The narrative arc may produce:
 
-- a runtime scenario summary
-- first message drafts
-- alternate first messages
-- a narrative arc lorebook
-- updates to an existing active lorebook
+- A runtime scenario summary
+- First message drafts
+- Alternate first messages
+- A narrative arc lorebook
+- Updates to an existing active lorebook
+- Relationship-framework notes for the active pairing
 
 A host application should treat these as downstream deliverables from the arc generator:
 
-1. runtime scenario overview
-2. first-message seeds
-3. alternate opening seeds
-4. narrative-arc lorebook hooks
+1. Runtime scenario overview
+2. First-message seeds
+3. Alternate opening seeds
+4. Narrative-arc lorebook hooks
 5. ALT or BRANCH managed lorebook projections for the active runtime/scenario direction
 
 If the user wants the arc controller to remember the current direction, the lorebook is the durable retrieval surface. The narrative arc itself is the planning surface.
