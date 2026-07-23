@@ -138,6 +138,7 @@ Purpose:
 Current docs:
 
 - `docs/relationship/humanos-relationship-memory.md`
+- `docs/relationship/humanos-relationship-commit-flow.md`
 
 ## What does not belong here
 

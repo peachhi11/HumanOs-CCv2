@@ -1,19 +1,30 @@
 # HumanOs-CCv2
 
-This branch holds the canonical HumanOS memory and retrieval guidance.
-
-It is for framework-level lorebook boundaries: what belongs in retrieval, how lorebooks should link to characters and personas, and how managed projections must stay separate from user-authored material.
+This branch holds the canonical HumanOS memory and retrieval guidance
+- `HumanOS-main` — landing branch, overview, and repo-level navigation
+- `docs/architecture` — framework architecture docs
+- `architecture/contracts` — runtime and narrative contracts
+- `architecture/templates` — reusable character and persona templates
+- `docs/memory-retrieval` — lorebook-linking and retrieval-boundary guidance
+- `docs/world-boundaries` — world-truth and world-state boundary guidance
+- `docs/authoring` — contributor-facing HumanOS authoring workflow guidance
+- `evaluation/scorecards` — evaluation scorecards and reviewer guidance
+- `evaluation/reviewer-modes` — reviewer operating modes and scope-selection guidance
+- `docs/relationship-memory` — relationship-save, commit-flow, and managed-projection boundaries
 
 Primary documents in this branch:
-
 - `docs/memory/humanos-lorebook-linking.md`
 
 Related docs live on sibling branches:
-
 - `docs/architecture` for the architectural overview
 - `architecture/contracts` for runtime and narrative contracts
 - `architecture/templates` for reusable character and persona templates
 - 
+See [docs/branch-map.md](docs/branch-map.md) for the detailed map and [docs/branch-strategy.md](docs/branch-strategy.md) for the rules that decide when a surface should get its own branch.
+
+It is for framework-level lorebook boundaries: what belongs in retrieval, how lorebooks should link to characters and personas, and how managed projections must stay separate from user-authored material.
+
+------
 Imagine a system designed to help create and refine characters, develop user personas, match these personas to characters, and compile role-play narratives. At its heart, it asks:
 
 1. Purpose
@@ -23,7 +34,6 @@ Considering who this person is, what they believe, what they perceive, who they 
 HumanOS focuses on making character behaviours clear and consistent, giving users control, and allowing for thoughtful projection into Character Card development for AI narratives on platforms like Marinara Engine.
 
 2. Operating Modes
-
 Character mode
 
 This setup mode can directly guide a player to create a character for AI to play during roleplay.
