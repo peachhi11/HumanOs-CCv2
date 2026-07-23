@@ -1,38 +1,33 @@
 # HumanOS v2 Branch Map
 
-This document explains what each branch in the HumanOS-CCv2 repository is meant to own.
+This document explains the current HumanOS-CCv2 repository layout and how it relates to the older branch-owned lanes.
 
-## Ownership model
+The default branch is `main`. It should contain the readable canonical framework surface so contributors can browse the current docs without hopping across branches.
 
-The repo is intentionally split by responsibility.
+## Ownership Model
 
-That keeps framework docs clean and makes it easier to move a concept without dragging an entire app implementation along with it.
+HumanOS docs are organized by responsibility:
 
-## Current branches
+- stable structure and contracts live under `architecture/`
+- explanatory framework docs live under `docs/`
+- host-app implementation notes stay in their host repo unless rewritten as framework-level guidance
 
-### `HumanOS-main`
+That keeps the framework clean, reusable, and independent from any one app.
 
-Purpose:
+## Current Main Layout
 
-- repo landing branch
-- overview and navigation
-- high-level explanation of what HumanOS is
-
-This branch should stay lightweight. It is the place a contributor lands first.
-
-### `docs/architecture`
+### `architecture/templates`
 
 Purpose:
 
-- architecture overview
-- layer separation
-- framework-level rationale
-- cross-surface index
+- reusable authoring templates
+- durable character truth structure
+- durable persona truth structure
 
 Current docs:
 
-- `docs/architecture/humanos-architecture-index.md`
-- `docs/architecture/humanos-v2-architecture.md`
+- `architecture/templates/humanos-character-card-template.md`
+- `architecture/templates/humanos-persona-template.md`
 
 ### `architecture/contracts`
 
@@ -48,20 +43,33 @@ Current docs:
 - `architecture/contracts/humanos-runtime-contract.md`
 - `architecture/contracts/humanos-narrative-arc-contract.md`
 
-### `architecture/templates`
+### `docs/architecture`
 
 Purpose:
 
-- reusable authoring templates
-- durable character truth structure
-- durable persona truth structure
+- architecture overview
+- layer separation
+- framework-level rationale
+- cross-surface index
 
 Current docs:
 
-- `architecture/templates/humanos-character-card-template.md`
-- `architecture/templates/humanos-persona-template.md`
+- `docs/architecture/humanos-architecture-index.md`
+- `docs/architecture/humanos-v2-architecture.md`
 
-### `docs/memory-retrieval`
+### `docs/authoring`
+
+Purpose:
+
+- contributor-facing HumanOS authoring workflow
+- placement rules for cards, personas, lorebooks, runtime, world, relationship memory, and evaluation
+- authoring versus runtime separation
+
+Current docs:
+
+- `docs/authoring/humanos-authoring-workflow.md`
+
+### `docs/memory`
 
 Purpose:
 
@@ -74,7 +82,7 @@ Current docs:
 
 - `docs/memory/humanos-lorebook-linking.md`
 
-### `docs/world-boundaries`
+### `docs/world`
 
 Purpose:
 
@@ -87,60 +95,66 @@ Current docs:
 
 - `docs/world/humanos-world-boundaries.md`
 
-### `docs/authoring`
-
-Purpose:
-
-- contributor-facing authoring workflow
-- placement rules for cards, personas, lorebooks, runtime, and evaluation
-- authoring versus runtime separation
-
-Current docs:
-
-- `docs/authoring/humanos-authoring-workflow.md`
-
-### `evaluation/scorecards`
-
-Purpose:
-
-- evaluation scorecards
-- reviewer verdict rules
-- ordered review expectations
-- correction and rejection boundaries
-
-Current docs:
-
-- `docs/evaluation/humanos-evaluation-scorecards.md`
-- `docs/evaluation/humanos-reviewer-contract.md`
-
-### `evaluation/reviewer-modes`
-
-Purpose:
-
-- reviewer operating modes
-- scope-selection rules
-- gate versus diagnostic review behavior
-- review-output shape expectations by mode
-
-Current docs:
-
-- `docs/evaluation/humanos-reviewer-modes.md`
-
-### `docs/relationship-memory`
+### `docs/relationship`
 
 Purpose:
 
 - relationship-save boundaries
 - checkpoint and milestone retention rules
 - managed lorebook projection separation
-- chat-local relationship continuity
+- relationship commit-flow guidance
+- qualitative relationship-framework interpretation
 
 Current docs:
 
 - `docs/relationship/humanos-relationship-memory.md`
 - `docs/relationship/humanos-relationship-commit-flow.md`
+- `docs/relationship/humanos-relationship-framework.md`
 
-## What does not belong here
+### `docs/evaluation`
+
+Purpose:
+
+- evaluation scorecards
+- reviewer verdict rules
+- ordered review expectations
+- reviewer operating modes and scope-selection guidance
+
+Current docs:
+
+- `docs/evaluation/humanos-evaluation-scorecards.md`
+- `docs/evaluation/humanos-reviewer-contract.md`
+- `docs/evaluation/humanos-reviewer-modes.md`
+
+### `docs/integration`
+
+Purpose:
+
+- boundary notes for host-app integrations
+- mapping between canonical HumanOS concepts and implementation-owned app surfaces
+
+Current docs:
+
+- `docs/integration/humanos-marinara-integration-map.md`
+
+## Historical Branch Lanes
+
+Earlier work used branch-owned slices for focused docs:
+
+- `HumanOS-main`
+- `docs/architecture`
+- `architecture/contracts`
+- `architecture/templates`
+- `docs/memory-retrieval`
+- `docs/world-boundaries`
+- `docs/authoring`
+- `docs/relationship-memory`
+- `evaluation/scorecards`
+- `evaluation/reviewer-modes`
+
+Those branches can still be useful as local worktrees or focused history, but `main` is now the branch that should present the current canonical structure.
+
+## What Does Not Belong Here
 
 The canonical framework repo should avoid swallowing host-app specifics by default.
 
@@ -149,20 +163,22 @@ Usually keep these in integration repos unless they are rewritten as framework-l
 - app-only route maps
 - one-app UI instructions
 - temporary debugging notes
-- implementation-specific migration chatter
+- implementation-specific migration notes
+- product-specific storage adapters
 - in-app assistant behavior that only makes sense inside one product
 
-## Integration guidance
+## Integration Guidance
 
 If an app such as Marinara Engine implements HumanOS:
 
 - framework concepts should point back here
-- app-specific routes, services, and UI flows should stay in the app repo
-- examples from an app are fine, but they should be labeled as integration examples rather than canonical requirements
+- app-specific routes, services, screens, storage, and UI flows should stay in the app repo
+- examples from an app are fine when they are labeled as integration examples rather than canonical requirements
 
-## Next likely additions
+## Next Likely Additions
 
 Likely future framework surfaces:
 
 - cross-app evaluator profiles
 - reference examples and sample packets
+- host-neutral narrative generator guidance
