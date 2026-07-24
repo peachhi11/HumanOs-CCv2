@@ -57,17 +57,31 @@ Current docs:
 - `docs/architecture/humanos-architecture-index.md`
 - `docs/architecture/humanos-v2-architecture.md`
 
+### `docs/agents`
+
+Purpose:
+
+- agent-facing HumanOS workflow routing
+- portable skill behavior summaries
+- packaging boundaries for host-app skill bundles
+
+Current docs:
+
+- `docs/agents/humanos-agent-workflow-map.md`
+
 ### `docs/authoring`
 
 Purpose:
 
 - contributor-facing HumanOS authoring workflow
 - placement rules for cards, personas, lorebooks, runtime, world, relationship memory, and evaluation
+- quick layer-ownership rules for humans and agents
 - authoring versus runtime separation
 
 Current docs:
 
 - `docs/authoring/humanos-authoring-workflow.md`
+- `docs/authoring/humanos-layer-rules.md`
 
 ### `docs/memory`
 
@@ -148,6 +162,7 @@ Earlier work used branch-owned slices for focused docs:
 - `docs/memory-retrieval`
 - `docs/world-boundaries`
 - `docs/authoring`
+- `docs/agents`
 - `docs/relationship-memory`
 - `evaluation/scorecards`
 - `evaluation/reviewer-modes`
@@ -166,6 +181,7 @@ Usually keep these in integration repos unless they are rewritten as framework-l
 - implementation-specific migration notes
 - product-specific storage adapters
 - in-app assistant behavior that only makes sense inside one product
+- general-purpose local skills that are not HumanOS-specific
 
 ## Integration Guidance
 
