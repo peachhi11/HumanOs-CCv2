@@ -54,6 +54,7 @@ The arc generator blends:
 - character truth
 - persona truth
 - current runtime truth
+- relationship-framework interpretation
 - relationship-save state
 - scenario context
 - active lorebook entries when relevant
@@ -65,6 +66,37 @@ That blend is what makes the arc useful. It should understand that runtime press
 - the scene pressure
 - the point in the relationship
 - the mode of play
+
+Relationship interpretation should stay qualitative. The arc generator may use trope-coded relationship language such as "reluctant allies," "slow-burn friends to lovers," "rivals with unresolved respect," or "rupture and repair" when that language helps explain what is plausible next. It should not require a universal numeric gate before a relationship beat can happen.
+
+## Narrative stitching workflow
+
+Before the generator writes the five-stage arc, it should stitch the available timeline evidence into coherent story sections.
+
+The reference logic comes from a Python `NarrativeStitcher`, but HumanOS should carry the workflow, not the Python implementation. A JavaScript or TypeScript implementation should preserve the same conceptual pass:
+
+1. Gather dated runtime, relationship-save, scenario, and lorebook-relevant events.
+2. Keep the events in chronological order and preserve their source evidence.
+3. Group events by the best available theme, using tags first, then event type, then `misc` only as a fallback.
+4. Score possible transitions by thematic overlap, matching event type, shared characters, and time density.
+5. Prefer sections that stay coherent without flattening emotional change. A visible sentiment or tension shift should become a story beat, not be smoothed away.
+6. Cap the number of sections so the result stays readable.
+7. Summarize each section as a short arc beat, then map those beats into Setup, Escalation, Complication, Turning Point, and Resolution / Transition.
+
+This stitching pass sits between runtime truth and narrative prose. It must not invent events to make the arc cleaner. If the source timeline is thin, contradictory, or missing key relationship evidence, the arc should say so and offer `ALT` or `BRANCH` only as explicit user-facing choices.
+
+Useful event metadata includes:
+
+- `date`
+- `title`
+- `type`
+- `tags`
+- participating characters or personas
+- relationship-state markers
+- tension or sentiment shift
+- source layer, such as runtime, relationship save, scenario, or lorebook
+
+The stitched sections are planning evidence. They may feed first-message seeds, alternate openings, narrative-arc lorebook hooks, or a runtime overlay, but they do not replace the runtime snapshot or relationship save.
 
 ## Output shape
 
@@ -127,6 +159,7 @@ The narrative arc may produce:
 - alternate first messages
 - a narrative arc lorebook
 - updates to an existing active lorebook
+- relationship-framework notes for the active pairing
 
 A host application should treat these as downstream deliverables from the arc generator:
 
