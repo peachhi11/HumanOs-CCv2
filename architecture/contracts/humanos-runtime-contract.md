@@ -1,6 +1,6 @@
 # HumanOS v2 Runtime Contract
 
-HumanOS runtime describes the present state of a chat. It's the mutable layer that changes during play, not the durable card layer that defines who the person is.
+HumanOS runtime describes the present state of a chat. It is the mutable layer that changes during play, not the durable card layer that defines who the person is.
 
 Runtime is also the source layer for the narrative arc generator. The runtime contract provides the present-state inputs that become a one-page arc overview, first-message drafts, alternate openings, and lorebook updates.
 
@@ -8,43 +8,52 @@ Runtime is also the source layer for the narrative arc generator. The runtime co
 
 Runtime holds the things that are true right now:
 
-- Current scene
-- Immediate goal
-- Mood
-- Stress
-- Fatigue
-- Recent pressure
-- Active relationship state
-- Relationship-framework interpretation
-- Unresolved commitments
-- Temporary status markers
+- current scene
+- immediate goal
+- mood
+- stress
+- fatigue
+- recent pressure
+- active relationship state
+- relationship-framework interpretation
+- unresolved commitments
+- temporary status markers
 
-Runtime mustn't overwrite:
+Runtime must not overwrite:
 
-- Character truth
-- Persona truth
-- World truth
-- Lorebook truth
-- Relationship-save history
+- character truth
+- persona truth
+- world truth
+- lorebook truth
+- relationship-save history
 
 ## What runtime should answer
 
 Runtime should let the system say:
 
-- What is happening now, has just changed, pressure is active, the current state means for the next reply, should be updated after the scene advances.
+- what is happening now
+- what has just changed
+- what pressure is active
+- what the current state means for the next reply
+- what should be updated after the scene advances
 
 ## Dynamic Metrics and Relationship Interpretation
 
 Not every runtime metric is universal. A metric may change depending on:
 
-- The character/persona combination, current story premise, immediate scene, relationship stage, mode of play, point in the scene arc.
+- the character/persona combination
+- the current story premise
+- the immediate scene
+- the relationship stage
+- the mode of play
+- the point in the scene arc
 
 Examples:
 
-- A trust value may rise faster in a slow-burn romance than in a hostile rivalry
-- A fatigue value may matter more in a survival scenario than in a casual conversation
-- A romance pressure meter may be irrelevant in a platonic route
-- A focus or attention metric may matter more for an ADHD-flavored persona than for a disciplined warrior
+- a trust value may rise faster in a slow-burn romance than in a hostile rivalry
+- a fatigue value may matter more in a survival scenario than in a casual conversation
+- a romance pressure meter may be irrelevant in a platonic route
+- a focus or attention metric may matter more for an ADHD-flavored persona than for a disciplined warrior
 
 The runtime contract should therefore describe metrics as scoped, not universal. Each metric needs a clear owner, a clear interpretation, and a clear update rule.
 
@@ -54,13 +63,13 @@ Relationship state follows the same rule. Runtime may record the current relatio
 
 Runtime should be updated when canonical evidence changes. That means:
 
-1. Capture the current scene state
-2. Compare it against the current runtime snapshot
-3. Update only the fields that actually changed
-4. Keep a commit boundary tied to canonical evidence
-5. Preserve history so later changes can be explained
+1. capture the current scene state
+2. compare it against the current runtime snapshot
+3. update only the fields that actually changed
+4. keep a commit boundary tied to canonical evidence
+5. preserve history so later changes can be explained
 
-Don't rewrite runtime just because a new reply exists. Update it when the reply actually changes the current state.
+Do not rewrite runtime just because a new reply exists. Update it when the reply actually changes the current state.
 
 ## Suggested runtime shape
 
@@ -93,28 +102,28 @@ Don't rewrite runtime just because a new reply exists. Update it when the reply 
 - Runtime is evidence-linked.
 - Runtime is rebuilt from canonical turns, not guessed from vibe.
 - Runtime should be compact enough to stay useful.
-- Runtime may be projected into a narrative arc overview, but that projection isn't the same thing as runtime truth itself.
+- Runtime may be projected into a narrative arc overview, but that projection is not the same thing as runtime truth itself.
 
 ## Relationship-aware guidance
 
 The runtime layer should understand that dynamic metrics vary with:
 
-- The pair or group involved
-- The current trust level
-- Whether the scene is intimate, tense, casual, or procedural
-- Whether the persona is emotionally open or guarded
-- Whether the current scene is a first meeting, a slow burn, a rupture, a repair, or a settled phase
+- the pair or group involved
+- the current trust level
+- whether the scene is intimate, tense, casual, or procedural
+- whether the persona is emotionally open or guarded
+- whether the current scene is a first meeting, a slow burn, a rupture, a repair, or a settled phase
 
 That keeps the system from acting like every relationship follows the same fixed staircase.
 
 Use the [HumanOS v2 Relationship Framework](../../docs/relationship/humanos-relationship-framework.md) when runtime needs to describe relationship state. The recommended model is a qualitative trust web:
 
-- Practical trust
-- Emotional trust
-- Moral trust
-- Physical trust
-- Social trust
-- Romantic trust
-- Narrative trust
+- practical trust
+- emotional trust
+- moral trust
+- physical trust
+- social trust
+- romantic trust
+- narrative trust
 
 These strands can move independently. A pair may trust each other in combat but not emotionally, feel attraction without moral trust, or share domestic ease while still avoiding an old rupture.
