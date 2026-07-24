@@ -18,6 +18,8 @@ Use this workflow when creating or refining:
 The goal is not to write one giant master prompt.
 The goal is to place durable identity, conditional depth, runtime state, and review logic in the correct surfaces.
 
+For the quick ownership test used by both humans and agents, see [HumanOS Layer Rules](humanos-layer-rules.md).
+
 ## Step 1: Define stable character truth
 
 Put stable, reusable character identity in the character surface.

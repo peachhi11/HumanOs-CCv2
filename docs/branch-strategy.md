@@ -34,6 +34,7 @@ Use these folder families unless there is a strong reason not to:
 - `architecture/templates` for reusable authoring templates
 - `architecture/contracts` for runtime, narrative, and output contracts
 - `docs/architecture` for framework overview and cross-surface indexes
+- `docs/agents` for agent-facing workflow routing and packaging boundaries
 - `docs/authoring` for contributor placement workflow
 - `docs/memory` for lorebook and retrieval boundaries
 - `docs/world` for setting and world-truth boundaries

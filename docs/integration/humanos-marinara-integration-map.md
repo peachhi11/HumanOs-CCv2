@@ -15,6 +15,7 @@ Current framework surfaces on `main`:
 - `docs/architecture` - architecture overview and cross-surface index
 - `architecture/contracts` - runtime and narrative contracts
 - `architecture/templates` - reusable character and persona templates
+- `docs/agents` - agent-facing workflow routing and packaging boundaries
 - `docs/memory` - lorebook-linking and retrieval-boundary guidance
 - `docs/world` - world-truth and world-state boundary guidance
 - `docs/authoring` - contributor-facing HumanOS authoring workflow guidance
@@ -55,6 +56,7 @@ Keep these in Marinara when they are primarily about this product's implementati
 | HumanOS architecture concepts | HumanOS-CCv2 `docs/architecture` | integration examples only |
 | Runtime and narrative contracts | HumanOS-CCv2 `architecture/contracts` | implementation of those contracts |
 | Character and persona templates | HumanOS-CCv2 `architecture/templates` | editor fields and app flows |
+| Agent-facing HumanOS workflow routing | HumanOS-CCv2 `docs/agents` | installed `.agents/skills` bundles and local agent metadata |
 | Lorebook-linking boundaries | HumanOS-CCv2 `docs/memory` | UI guide in `docs/lorebooks/linking-to-characters.md` |
 | World-truth and world-state boundary rules | HumanOS-CCv2 `docs/world` | app-specific world state, scenario, and storage implementation |
 | Contributor-facing authoring workflow | HumanOS-CCv2 `docs/authoring` | product-specific editors, prompts, and creation flows |

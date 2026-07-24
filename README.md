@@ -10,6 +10,7 @@ The framework keeps durable identity, mutable runtime truth, conditional retriev
 - [HumanOS v2 Architecture](docs/architecture/humanos-v2-architecture.md)
 - [HumanOS v2 Branch Map](docs/branch-map.md)
 - [HumanOS v2 Branch Strategy](docs/branch-strategy.md)
+- [HumanOS Agent Workflow Map](docs/agents/humanos-agent-workflow-map.md)
 
 ## Core Surfaces
 
@@ -23,6 +24,7 @@ The framework keeps durable identity, mutable runtime truth, conditional retriev
 ### Framework Boundaries
 
 - [Authoring Workflow](docs/authoring/humanos-authoring-workflow.md)
+- [Layer Rules](docs/authoring/humanos-layer-rules.md)
 - [Lorebook Linking Boundaries](docs/memory/humanos-lorebook-linking.md)
 - [World Boundaries](docs/world/humanos-world-boundaries.md)
 - [Relationship Memory and Save Boundaries](docs/relationship/humanos-relationship-memory.md)
@@ -39,6 +41,10 @@ The framework keeps durable identity, mutable runtime truth, conditional retriev
 
 - [Marinara Integration Map](docs/integration/humanos-marinara-integration-map.md)
 
+### Agent-Facing Workflows
+
+- [Agent Workflow Map](docs/agents/humanos-agent-workflow-map.md)
+
 ## Repository Structure
 
 ```text
@@ -46,6 +52,7 @@ architecture/
   contracts/   Runtime and narrative-output contracts.
   templates/   Reusable character and persona templates.
 docs/
+  agents/       Agent-facing workflow routing and packaging boundaries.
   architecture/  Cross-surface overview and index.
   authoring/     Placement workflow for HumanOS artifacts.
   evaluation/    Scorecards, reviewer contract, and reviewer modes.
