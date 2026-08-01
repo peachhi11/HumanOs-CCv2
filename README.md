@@ -36,6 +36,7 @@ The framework keeps durable identity, mutable runtime truth, conditional retriev
 - [Evaluation Scorecards](docs/evaluation/humanos-evaluation-scorecards.md)
 - [Reviewer Contract](docs/evaluation/humanos-reviewer-contract.md)
 - [Reviewer Modes](docs/evaluation/humanos-reviewer-modes.md)
+- [Evaluation Specs](docs/evaluation/humanos-evaluation-specs.md)
 
 ### Integration Boundary
 
@@ -55,7 +56,7 @@ docs/
   agents/       Agent-facing workflow routing and packaging boundaries.
   architecture/  Cross-surface overview and index.
   authoring/     Placement workflow for HumanOS artifacts.
-  evaluation/    Scorecards, reviewer contract, and reviewer modes.
+  evaluation/    Scorecards, reviewer contract, reviewer modes, and evaluation specs.
   integration/   Boundary notes for host-app integrations.
   memory/        Lorebook and retrieval ownership rules.
   relationship/  Relationship-save, commit-flow, and trust-web guidance.
