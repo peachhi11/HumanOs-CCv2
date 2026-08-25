@@ -25,6 +25,7 @@ The framework keeps durable identity, mutable runtime truth, conditional retriev
 
 - [Authoring Workflow](docs/authoring/humanos-authoring-workflow.md)
 - [Layer Rules](docs/authoring/humanos-layer-rules.md)
+- [Lorebook Authoring Guide](docs/memory/humanos-lorebook-authoring-guide.md)
 - [Lorebook Linking Boundaries](docs/memory/humanos-lorebook-linking.md)
 - [World Boundaries](docs/world/humanos-world-boundaries.md)
 - [Relationship Memory and Save Boundaries](docs/relationship/humanos-relationship-memory.md)
@@ -58,7 +59,7 @@ docs/
   authoring/     Placement workflow for HumanOS artifacts.
   evaluation/    Scorecards, reviewer contract, reviewer modes, and evaluation specs.
   integration/   Boundary notes for host-app integrations.
-  memory/        Lorebook and retrieval ownership rules.
+  memory/        Lorebook authoring, retrieval, and ownership rules.
   relationship/  Relationship-save, commit-flow, and trust-web guidance.
   world/         World-truth boundaries.
 ```

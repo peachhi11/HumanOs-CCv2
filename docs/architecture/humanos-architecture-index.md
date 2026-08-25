@@ -98,6 +98,7 @@ Use when you need:
 
 Reference:
 
+- [HumanOS Lorebook Authoring Guide](../memory/humanos-lorebook-authoring-guide.md)
 - [HumanOS Lorebook Linking Boundaries](../memory/humanos-lorebook-linking.md)
 
 ### Relationship Save
