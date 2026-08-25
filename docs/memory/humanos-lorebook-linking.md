@@ -4,6 +4,8 @@ This document defines what a lorebook link means in HumanOS and what it does not
 
 It is a framework-level boundary document, not a host-app click path.
 
+For guidance on writing the entries themselves, see the [HumanOS Lorebook Authoring Guide](humanos-lorebook-authoring-guide.md).
+
 ## What lorebooks are for
 
 In HumanOS, a lorebook is the retrieval surface for conditional depth.
