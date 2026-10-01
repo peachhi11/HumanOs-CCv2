@@ -77,11 +77,15 @@ A side-character entry should cover more than biography.
 
 Include:
 
+- enough identity detail for the entry to function as a compact character card for that NPC
+- names, aliases, title, life stage, appearance, species or body rules, and family ties when those facts are relevant
 - relationship to the active character or persona
 - social role or story function
 - what the side character wants
 - what they avoid saying directly
 - how their presence changes the room
+
+These anchors matter because side-character identity usually does not live in the active character or persona card. If the lorebook entry does not carry it, the model may invent it.
 
 Names, titles, nicknames, and social roles usually make strong activation keys.
 
@@ -101,16 +105,17 @@ For HumanOS relationship progression, keep earned chat-local history in the rela
 
 ### Factual anchors
 
-Use factual anchors for details the model tends to improvise:
+Use lorebook factual anchors only for conditionally relevant retrieval subjects.
 
-- age
-- appearance
-- names and aliases
-- family relationships
-- locations
-- titles
-- species or body rules
-- important objects
+For the active character or persona, core identity anchors such as age, appearance, names, aliases, family relationships, and species or body rules belong in the character card or persona. Do not hide those facts behind keyword activation.
+
+For side characters, locations, factions, items, and other conditional subjects, lorebook anchors are useful for details the model tends to improvise:
+
+- side-character names, aliases, titles, life stage, appearance, family ties, and body rules
+- location names, geography, atmosphere, ownership, and local constraints
+- faction names, ranks, symbols, power structures, and public reputation
+- item names, appearance, history, ownership, limits, and costs
+- conditional titles, social roles, legal statuses, or species rules that matter only when the entry activates
 
 Give enough specificity that the model does not need to guess.
 
